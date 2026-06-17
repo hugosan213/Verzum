@@ -9,7 +9,7 @@
 }
 
 .contenido {
-    /* background: url('../assets/quienes_somos_alfajor.png') no-repeat center center; */
+  /*background: url('../assets/sobre_nosotros.png') no-repeat center center;*/
   background-size: cover;
 }
 
@@ -27,7 +27,7 @@
 }
 .texto_local h2 {
     font-size: 3rem;
-    color: var(--color-pink);
+    color: var(--color-verde);
     padding: 20px;
     border-radius: 20px;
 }
@@ -57,7 +57,7 @@
   right: -10%;
   top: 50%;
 
-  width: 50%;
+  width: 150%;
   z-index: -1;
   display: flex;
   justify-content: center;
