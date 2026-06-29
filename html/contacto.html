@@ -1,0 +1,111 @@
+<section id="contacto">
+
+  <div class="intro-contacto">
+
+    <p class="etiqueta-seccion">
+      Contacto
+    </p>
+
+    <h2 class="titulo-seccion">
+      HABLEMOS DE TU PRÓXIMO AUTO
+    </h2>
+
+    <p class="descripcion-contacto">
+      Estamos disponibles para responder tus dudas y ayudarte a mejorar la presencia online de tu negocio. Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+
+    <div class="info-contacto">
+      <p>
+        <a href="https://wa.me/12345678910" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp: +54 9 297 123-4567
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.instagram.com/verzum_software/" target="_blank">
+          <i class="fa-brands fa-instagram"></i> Instagram: @verzum_software
+        </a>
+      </p>
+
+      <p>
+        <a href="mailto:info@verzumsoftware.com">
+          <i class="fa-solid fa-envelope"></i> Email: info@verzumsoftware.com
+        </a>
+      </p>
+
+    </div>
+  </div>
+
+  <form class="formulario-contacto" onsubmit="manejarEnvio(event)">
+
+    <div class="fila-formulario">
+
+      <div class="grupo-formulario">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Juan García"
+          required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="juan@email.com"
+          required>
+      </div>
+
+    </div>
+
+    <div class="grupo-formulario">
+
+      <label for="servicios">
+        Servicio de interés
+      </label>
+
+      <select id="servicio" name="servicio">
+
+        <option value="">
+          Seleccionar...
+        </option>
+
+        <option>Presencia digital</option>
+        <option>Diseño web</option>
+        <option>Automatizacion con IA</option>
+        <option>Desarollo a Medida</option>
+
+      </select>
+
+    </div>
+
+    <div class="grupo-formulario">
+
+      <label for="mensaje">
+        Mensaje
+      </label>
+
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        rows="5"
+        placeholder="¿Qué vehículo estás buscando?">
+      </textarea>
+
+    </div>
+
+    <button
+      type="submit"
+      id="boton-enviar"
+      class="boton-enviar">
+
+      Enviar consulta
+
+    </button>
+
+  </form>
+
+</section>

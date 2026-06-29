@@ -11,15 +11,16 @@
   --color-pink: #ff5d90;
   --color-rosa: #ff5d90;
   --color-azul: #3b82f6;
-  --color-verde: #38b000;
+  --color-verde: #ffffff;
   --color-amarillo: #facc15;
 }
 
-body {
+html, body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
-    background-color: var(--color-white);
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .navbar {

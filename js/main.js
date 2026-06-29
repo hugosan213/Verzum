@@ -9,12 +9,24 @@ function cargarSeccion(id, archivo, callback) {
 }
 
 // Cargar todas las secciones
+
+
 cargarSeccion("seccion-hero", "./html/hero.html");
 cargarSeccion("galeria", "./html/galeria.html");
 cargarSeccion("tarifas", "./html/tarifas.html", () => {
   const tarifaCards = document.querySelectorAll('#tarifas .tarifa-card');
   tarifaCards.forEach(card => scrollObserver.observe(card));
 });
+cargarSeccion(
+  "contacto-container",
+  "html/contacto.html",
+  () => {
+    const contactoIntro = document.querySelector('#contacto .intro-contacto');
+    if (contactoIntro) {
+      contactObserver.observe(contactoIntro);
+    }
+  }
+);
 cargarSeccion("seccion-tecnologias", "./html/tecnologias.html");
 cargarSeccion("sobre_nosotros", "./html/sobre_nosotros.html", () => {
   const textoLocal = document.querySelector('#sobre_nosotros .texto_local');
@@ -22,7 +34,6 @@ cargarSeccion("sobre_nosotros", "./html/sobre_nosotros.html", () => {
     observer.observe(textoLocal);
   }
 });
-cargarSeccion("contacto", "./html/mapa.html");
 
 // Efecto parallax para la imagen de alfajores
 window.addEventListener('scroll', () => {
@@ -40,6 +51,16 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
+
+// Animación de scroll para la introducción de contacto
+const contactObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      contactObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
 
 // Animación de scroll para las tarjetas de tarifas
 const scrollObserver = new IntersectionObserver((entries) => {
